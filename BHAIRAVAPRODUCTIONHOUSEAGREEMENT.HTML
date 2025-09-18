@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>BHAIRAVA PRODUCTION HOUSE</title>
+  <style>
+    :root{--accent:#0b6cf0;--muted:#6b7280;--bg:#0f1724;--card:#0b1220}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Arial;background:linear-gradient(180deg,#071029 0%, #071427 60%);color:#e6eef8}
+    .container{max-width:960px;margin:32px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    header{display:flex;gap:16px;align-items:center;margin-bottom:18px}
+    .logo{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px}
+    h1{margin:0;font-size:20px}
+    p.lead{margin:4px 0 0;color:var(--muted);font-size:13px}
+
+    form{margin-top:14px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    label{display:block;font-size:13px;margin-bottom:6px;color:#dbeafe}
+    input[type="text"],input[type="email"],input[type="date"],input[type="tel"],select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:inherit;outline:none}
+    textarea{min-height:90px;resize:vertical}
+    .full{grid-column:1/-1}
+    .muted{color:var(--muted);font-size:13px}
+    .terms{background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);font-size:13px;color:#dbeafe}
+    .actions{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}
+    button{background:var(--accent);border:0;color:white;padding:10px 14px;border-radius:10px;font-weight:600;cursor:pointer}
+    button.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:720px){.grid{grid-template-columns:1fr}.logo{width:52px;height:52px}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">BPH</div>
+      <div>
+        <h1>BHAIRAVA PRODUCTION HOUSE — Short Film Agreement</h1>
+        <p class="lead">Please complete the agreement below. Fields marked * are required.</p>
+      </div>
+    </header>
+
+    <form id="agreementForm" autocomplete="off">
+      <div class="grid">
+        <div>
+          <label for="fullName">Full name *</label>
+          <input id="fullName" name="fullName" type="text" required placeholder="e.g. Ravi Kumar" />
+        </div>
+
+        <div>
+          <label for="role">Role *</label>
+          <select id="role" name="role" required>
+            <option value="">-- select role --</option>
+            <option>Actor</option>
+            <option>Director</option>
+            <option>Producer</option>
+            <option>Crew</option>
+            <option>Composer</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com" />
+        </div>
+
+        <div>
+          <label for="phone">Phone *</label>
+          <input id="phone" name="phone" type="tel" pattern="[0-9+\-() ]{7,20}" required placeholder="+91 91234 56789" />
+        </div>
+
+        <div class="full">
+          <label for="address">Address</label>
+          <input id="address" name="address" type="text" placeholder="Street, city, state, PIN" />
+        </div>
+
+        <div>
+          <label for="dob">Date of birth</label>
+          <input id="dob" name="dob" type="date" />
+        </div>
+
+        <div>
+          <label for="idType">ID proof</label>
+          <select id="idType" name="idType">
+            <option>None</option>
+            <option>Aadhar</option>
+            <option>Driving License</option>
+            <option>Passport</option>
+          </select>
+        </div>
+
+        <div class="full">
+          <label for="projectTitle">Project / Short film title *</label>
+          <input id="projectTitle" name="projectTitle" type="text" required placeholder="Enter the short film name" />
+        </div>
+
+        <div>
+          <label for="startDate">Start date</label>
+          <input id="startDate" name="startDate" type="date" />
+        </div>
+
+        <div>
+          <label for="endDate">End date</label>
+          <input id="endDate" name="endDate" type="date" />
+        </div>
+
+        <div class="full">
+          <label for="compensation">Compensation / Payment terms</label>
+          <input id="compensation" name="compensation" type="text" placeholder="e.g. ₹5000 per day or Revenue share" />
+        </div>
+
+        <div class="full">
+          <label for="consent">Consent & Agreement *</label>
+          <div class="terms">
+            By signing this form I confirm that I agree to participate in the short film listed above, grant BHAIRAVA PRODUCTION HOUSE the right to use my likeness and performance in any formats, accept the payment terms above (if any), and will comply with production rules. I confirm I have read and understood the health & safety rules. Any disputes will be resolved within the local jurisdiction.
+          </div>
+        </div>
+
+        <div>
+          <label for="signature">Signature (type full name) *</label>
+          <input id="signature" name="signature" type="text" required placeholder="Type your full name as signature" />
+        </div>
+
+        <div>
+          <label for="witness">Witness name</label>
+          <input id="witness" name="witness" type="text" placeholder="Optional" />
+        </div>
+
+        <div class="full">
+          <label for="notes">Notes / Special conditions</label>
+          <textarea id="notes" name="notes" placeholder="Any special conditions, allergies, requests..."></textarea>
+        </div>
+
+        <div>
+          <label for="idFile">Upload ID (optional)</label>
+          <input id="idFile" name="idFile" type="file" accept="image/*,application/pdf" />
+        </div>
+
+        <div>
+          <label for="agreeCheck">Agreement confirmation *</label>
+          <div style="margin-top:6px">
+            <input id="agreeCheck" name="agreeCheck" type="checkbox" required /> <label for="agreeCheck" class="muted" style="display:inline">I have read and agree to the terms above.</label>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="actions">
+        <button type="button" class="secondary" id="downloadBtn">Download copy</button>
+        <button type="submit">Submit & Send Thank You</button>
+      </div>
+
+    </form>
+
+    <footer>
+      <div>© BHAIRAVA PRODUCTION HOUSE — Please retain a copy of your agreement.</div>
+    </footer>
+  </div>
+
+  <script>
+    // Helper: convert form data to CSV row
+    function formDataToCSV(fd){
+      const keys = [
+        'fullName','role','email','phone','address','dob','idType','projectTitle','startDate','endDate','compensation','signature','witness','notes'
+      ];
+      const header = keys.join(',');
+      const values = keys.map(k => '"'+((fd.get(k)||'').toString().replace(/\"/g,'""'))+'"');
+      return header + '\n' + values.join(',');
+    }
+
+    document.getElementById('downloadBtn').addEventListener('click', ()=>{
+      const form = document.getElementById('agreementForm');
+      const fd = new FormData(form);
+      const csv = formDataToCSV(fd);
+      const blob = new Blob([csv],{type:'text/csv'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'BHAIRAVA_agreement_'+(fd.get('fullName')||'submission')+'.csv';
+      document.body.appendChild(a); a.click(); URL.revokeObjectURL(url); a.remove();
+    });
+
+    document.getElementById('agreementForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      const form = e.target;
+      if(!form.reportValidity()) return;
+
+      const fd = new FormData(form);
+      const name = fd.get('fullName') || 'Participant';
+      const email = fd.get('email') || '';
+
+      // Build a simple message for thank-you email
+      const subject = encodeURIComponent('Thank you for joining BHAIRAVA PRODUCTION HOUSE');
+      const bodyLines = [
+        `Hello ${name},`,
+        '',
+        'THANK YOU FOR JOINING IN BHAIRAVA PRODUCTION HOUSE',
+        '',
+        'We have received your short film agreement details. Below is a copy of the submission:',
+        '',
+        `Name: ${name}`,
+        `Role: ${fd.get('role')}`,
+        `Project: ${fd.get('projectTitle')}`,
+        `Start: ${fd.get('startDate') || '-'}  End: ${fd.get('endDate') || '-'}`,
+        '',
+        'If you have any questions reply to this email.'
+      ];
+      const body = encodeURIComponent(bodyLines.join('\n'));
+
+      // Open user's default mail client with prefilled content (best-effort)
+      if(email){
+        window.location.href = `mailto:${encodeURIComponent(email)}?subject=${subject}&body=${body}`;
+      }
+
+      // Also show an on-page confirmation and create a downloadable copy automatically
+      alert('Agreement submitted! A thank-you email window will open if your mail client is configured.\n\nYou can also download a copy from the page.');
+
+      // create and auto-download CSV copy
+      const csv = formDataToCSV(fd);
+      const blob = new Blob([csv],{type:'text/csv'});
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url; a.download = 'BHAIRAVA_agreement_'+(name.replace(/\s+/g,'_')||'submission')+'.csv';
+      document.body.appendChild(a); a.click(); URL.revokeObjectURL(url); a.remove();
+
+      // reset form optionally
+      form.reset();
+    });
+  </script>
+  <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <style>
+    :root{--accent:#0b6cf0;--muted:#6b7280;--bg:#0f1724;--card:#0b1220}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,Arial;background:linear-gradient(180deg,#071029 0%, #071427 60%);color:#e6eef8}
+    .container{max-width:960px;margin:32px auto;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));border-radius:12px;box-shadow:0 8px 30px rgba(0,0,0,0.6)}
+    header{display:flex;gap:16px;align-items:center;margin-bottom:18px}
+    .logo{width:64px;height:64px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;font-size:18px}
+    h1{margin:0;font-size:20px}
+    p.lead{margin:4px 0 0;color:var(--muted);font-size:13px}
+    .director-section{margin-top:30px;padding:20px;background:rgba(255,255,255,0.02);border-radius:12px;border:1px solid rgba(255,255,255,0.05)}
+    .director-section h2{margin-top:0;color:#dbeafe}
+    .director-photos{display:flex;gap:20px;flex-wrap:wrap;margin-top:12px}
+    .director-photos img{width:280px;max-width:100%;border-radius:12px;box-shadow:0 6px 16px rgba(0,0,0,0.5)}
+    form{margin-top:14px}
+    .grid{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    label{display:block;font-size:13px;margin-bottom:6px;color:#dbeafe}
+    input[type="text"],input[type="email"],input[type="date"],input[type="tel"],select,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:rgba(255,255,255,0.02);color:inherit;outline:none}
+    textarea{min-height:90px;resize:vertical}
+    .full{grid-column:1/-1}
+    .muted{color:var(--muted);font-size:13px}
+    .terms{background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);font-size:13px;color:#dbeafe}
+    .actions{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}
+    button{background:var(--accent);border:0;color:white;padding:10px 14px;border-radius:10px;font-weight:600;cursor:pointer}
+    button.secondary{background:transparent;border:1px solid rgba(255,255,255,0.06)}
+    footer{margin-top:18px;text-align:center;color:var(--muted);font-size:13px}
+    @media (max-width:1000px){.grid{grid-template-columns:1fr}.logo{width:52px;height:52px}.director-photos{flex-direction:column}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>BHAIRAVA PRODUCTION HOUSE</h1>
+      </div>
+    </header>
+
+    <section class="director-section">
+      <h2>Founder & Creative Director</h2>
+      <p><strong>Solethi Sashikanth</strong> is the <em>Founder</em>, <em>Writer</em>, <em>Director</em>, and <em>Editor</em> of <strong>BHAIRAVA PRODUCTION HOUSE</strong>. With an unshakable passion for storytelling and visual artistry, he established this production house to bring bold, innovative, and emotionally powerful stories to the screen. His work reflects dedication, creativity, and a drive to inspire audiences with meaningful cinema.</p>
+      <p>Under his leadership, Bhairava Production House has grown into a creative hub where fresh ideas meet professional execution. Sashikanth believes that every frame should speak louder than words, and every story should connect deeply with hearts and minds. His vision is to build a legacy of films that remain timeless and impactful.</p>
+      <div class="director-photos">
+        <img src="sashikanth.jpg" alt="Solethi Sashikanth portrait">
+        <img src="sashi.jpg" alt="Solethi Sashikanth full view">
+      </div>
+    </section>
+</body>
+</html>
+</body>
+</html>
